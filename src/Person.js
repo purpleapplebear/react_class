@@ -1,12 +1,14 @@
 import React from 'react';
 
-function item(){
-    return <h2>123</h2>
-}
+// function item(){
+//     return <h2>123</h2>
+// }
 
 let jobs = {
-    "ninja": <h2>Ninja details</h2>,
-    "artist": <h2>Artist details</h2>,
+    "ninja": <h2 style={{backgroundColor: "pink"}}>Ninja details</h2>,
+    "artist": (props) => {
+        return <h2 style={{backgroundColor: (props.color)}}>Artist details</h2>
+    },
     "designer": (props) => {
         return <h3>Job type: {props.type}</h3>
     },
@@ -21,8 +23,7 @@ export default function person(props){
     return (
 
     <div>
-        <h1>Person:</h1>
-        {props.test ? item() : ''}
+        {/* {props.test ? item() : ''} */}
         {/* {jobs[props.test] ? jobs[props.test] : ""} */}
         {getJob(props.test, props)}
         <table>

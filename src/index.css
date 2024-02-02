@@ -24,13 +24,17 @@ code {
   background-color: aquamarine;
 }
 
+h2 {
+  padding:5px;
+}
+
 hr {
   border-top: 1px dashed pink;
   width:50vw;
 }
 
 table {
-  width:50vw;
+  width:30vw;
   margin: 0 auto;
 }
 
